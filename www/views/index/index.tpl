@@ -1,0 +1,3 @@
+{* smarty *}
+
+{cycle values=$quotes}
