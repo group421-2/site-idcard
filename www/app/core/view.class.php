@@ -11,8 +11,7 @@ class view {
         self::$_view = $v;
     }
 
-    public function configure()
-    {
+    public function configure() {
         $v->allow_php_templates = true;
         $v->force_compile = false;
         $v->caching = false;
@@ -23,8 +22,7 @@ class view {
         $v->cache_dir =     $_SERVER['DOCUMENT_ROOT'] . '/cache/';
     }
 
-    public static function viewTracert($tracert)
-    {
+    public static function viewTracert($tracert) {
         require_once '/views/tracert/error.php';
         new tracertError($tracert);
     }
