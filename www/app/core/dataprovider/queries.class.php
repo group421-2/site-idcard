@@ -17,7 +17,7 @@ class queries {
     private $_query;
     private $_switcher; // 1: select, 2: insert, 3: update
     private $_order;
-
+    
     public function select($select) 
     {
         $this->_select = $select;
@@ -79,16 +79,16 @@ class queries {
         switch ($this->_switcher) 
         {
             case 1:
-            $this->_query = "SELECT " . $this->_select . " FROM " . $this->_from . " " . $this->_where . " " . $this->_order;
+                $this->_query = "SELECT " . $this->_select . " FROM " . $this->_from . " " . $this->_where . " " . $this->_order;
             break;
             case 2:
-            $this->_query = "INSERT INTO " . $this->_into . " VALUES " . $this->_values;
+                $this->_query = "INSERT INTO " . $this->_into . " VALUES " . $this->_values;
             print "<pre>";
-            var_dump($this->_query);
+                var_dump($this->_query);
             print "</pre>";
             break;
             case 3:
-            $this->_query = "UPDATE " . $this->_update_table . " SET " . $this->_set . " " . $this->_where;
+                $this->_query = "UPDATE " . $this->_update_table . " SET " . $this->_set . " " . $this->_where;
             break;
         }
     }

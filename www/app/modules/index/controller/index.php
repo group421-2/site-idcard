@@ -13,9 +13,7 @@ class Index_Controller extends Index_Model {
     }
 
     private function execute() {
-        new view();
-        view::$_view->assign("quotes", $this->getLastQuotes());
-        view::$_view->display("views/index/index.tpl");
+        
     }
 
 }

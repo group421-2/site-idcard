@@ -11,7 +11,7 @@ class databaseprovider {
      */
     private $_db_host;
 
-    /** 
+    /**
      * @var string $_db_user содержит имя пользователя
      */
     private $_db_user;

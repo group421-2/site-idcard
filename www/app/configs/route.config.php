@@ -3,10 +3,9 @@
 /**
 * 
 */
-class routeConfig extends Configs
-{
+class routeConfig extends Configs {
 	
 	//TODO: записать массив с роутами
 }
 
- ?>
+?>
