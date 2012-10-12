@@ -16,8 +16,10 @@ class error {
 
     public static function getError($error) {
         $this->_error = $error;
-        
-        
+    }
+    
+    public static function pageNotFound() {
+        require_once $_SERVER['DOCUMENT_ROOT']."/views/error.php";
     }
 
 }

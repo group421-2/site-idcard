@@ -6,6 +6,7 @@
  */
 require_once $_SERVER['DOCUMENT_ROOT'] . '/app/core/import.class.php';
 new import("error");
+new import("constants");
 
 class route {
 
@@ -55,7 +56,7 @@ class route {
             if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/app/modules/' . $this->_uri[1] . '/controller/index.php')) {
                 require_once $_SERVER['DOCUMENT_ROOT'] . '/app/modules/' . $this->_uri[1] . '/controller/index.php';
             } else {
-                error::getError("404 <br />This page does no found");
+                error::pageNotFound();
                 return;
             }
             $this->_controller = $this->_class . "_Controller";
@@ -72,7 +73,7 @@ class route {
             if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/app/modules/' . $this->_uri[1] . '/controller/' . $file . ".php")) {
                 require_once $_SERVER['DOCUMENT_ROOT'] . '/app/modules/' . $this->_uri[1] . '/controller/' . $file . ".php";
             } else {
-                error::getError("404 <br />This page does no found");
+                error::pageNotFound();
                 return;
             }
             $this->_controller = $this->_class . "_" . $file . "_Controller";

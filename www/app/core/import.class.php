@@ -23,6 +23,9 @@ class import {
         } elseif ($importString == "tracert") {
             require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/tracert.class.php";
             return true;
+        } elseif ($importString == "constants") {
+            require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/tracert.class.php";
+            return true;
         }
         /**
          * Импортирование моделей и контроллеров 
