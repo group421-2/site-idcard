@@ -4,6 +4,9 @@
  * Класс роутинга, перенаправление страниц, подобие ЧПУ
  * @author PeoneEr
  */
+require_once $_SERVER['DOCUMENT_ROOT'] . '/app/core/import.class.php';
+new import("error");
+
 class route {
 
     //TODO: переписать класс, он должен перенаправлять только запросы, которые обрабатываются после route.config.php

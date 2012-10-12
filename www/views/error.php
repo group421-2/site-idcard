@@ -1,4 +1,1 @@
-<?php
-
-print "We have an error!";
-?>
+<?php print "We have an error!"; ?>
