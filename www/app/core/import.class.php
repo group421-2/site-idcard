@@ -18,17 +18,21 @@ class import {
             case "model":
                 if (count($this->_import) == 2) {
                     require_once $_SERVER['DOCUMENT_ROOT'] . "/app/modules/".$this->_import[1]."/model/index.php";
+                    return true;
                 }
                 if (count($this->_import) == 3) {
                     require_once $_SERVER['DOCUMENT_ROOT'] . "/app/modules/".$this->_import[1]."/model/".$this->_import[2].".php";
+                    return true;
                 }
                 break;
             case "controller":
                 if (count($this->_import) == 2) {
                     require_once $_SERVER['DOCUMENT_ROOT'] . "/app/modules/".$this->_import[1]."/controller/index.php";
+                    return true;
                 }
                 if (count($this->_import) == 3) {
                     require_once $_SERVER['DOCUMENT_ROOT'] . "/app/modules/".$this->_import[1]."/controller/".$this->_import[2].".php";
+                    return true;
                 }
                 break;
         }

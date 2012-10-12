@@ -24,7 +24,6 @@ class Config {
         $this->db_type = (usersConfig::$db_type) ? (usersConfig::$db_type) : error::getError(_CONFIG_NOT_FOUND);
         //TODO: передавать локаль в параметрах
         if ($this->db_use) {
-            //new databaseprovider(usersConfig::$db_host, usersConfig::$db_user, usersConfig::$db_pass, usersConfig::$db_table,  usersConfig::$_debug);
             new databaseprovider($this->db_host, $this->db_user, $this->db_password, $this->db_table, $this->db_type);
         }
     }
