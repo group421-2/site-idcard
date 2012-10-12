@@ -13,7 +13,7 @@ class Index_Controller extends Index_Model {
     }
 
     private function execute() {
-        
+//        echo 'Hello world!';
     }
 
 }

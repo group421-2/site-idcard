@@ -1,10 +1,14 @@
 <?php
 
 class Core {
-
+    /**
+     * Точка входа в приложение. Устанавливает роутинг.
+     * @param string $url
+     * 
+     */
     public function Start($url) {
         require_once "route.class.php";
-        $route = new route($url);
+        new route($url);
     }
 
 }
