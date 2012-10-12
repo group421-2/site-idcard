@@ -24,7 +24,9 @@ class import {
             require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/tracert.class.php";
             return true;
         }
-        
+        /**
+         * Импортирование моделей и контроллеров 
+         */
         $this->_import = explode(".", $importString);
         if (!$this->_import)
             return array("error" => "Не указаны модели для импортирования");
