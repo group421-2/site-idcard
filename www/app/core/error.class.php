@@ -3,6 +3,9 @@
 /**
  * TODO: реализовать класс
  */
+require_once $_SERVER['DOCUMENT_ROOT'] . '/app/core/import.class.php';
+new import("write");
+
 class error {
 
     private $_error = null;
@@ -13,6 +16,7 @@ class error {
 
     public static function getError($error) {
         $this->_error = $error;
+        
         
     }
 
