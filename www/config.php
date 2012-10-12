@@ -11,6 +11,8 @@ class usersConfig extends Config {
     public static $db_pass = "";
     public static $db_table = "quotes";
     public static $_debug = true;
+    public static $db_type = "mysql";
+    public static $db_locale = "utf8";
 
 }
 

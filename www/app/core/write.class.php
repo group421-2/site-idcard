@@ -1,14 +1,14 @@
-<?php 
+<?php
 
 /**
-* TODO: реализовать класс
-*/
+ * TODO: реализовать класс
+ */
 class write {
-	
-	public function __construct() {
-		# code...
-	}
 
+    public function __construct() {
+        # code...
+    }
 
 }
+
 ?>
