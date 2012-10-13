@@ -26,6 +26,8 @@ class import {
         } elseif ($importString == "constants") {
             require_once $_SERVER['DOCUMENT_ROOT'] . "/app/configs/constants.php";
             return true;
+        } elseif ($importString == "config") {
+            require_once $_SERVER['DOCUMENT_ROOT'] . "/app/configs/Config.php";
         }
         /**
          * Импортирование моделей и контроллеров 
