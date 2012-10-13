@@ -14,21 +14,29 @@ class import {
         /**
          * Импортирование дополнительных классов 
          */
-        if ($importString == "error") {
-            require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/error.class.php";
-            return true;
-        } elseif ($importString == "write") {
-            require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/write.class.php";
-            return true;
-        } elseif ($importString == "tracert") {
-            require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/tracert.class.php";
-            return true;
-        } elseif ($importString == "constants") {
-            require_once $_SERVER['DOCUMENT_ROOT'] . "/app/configs/constants.php";
-            return true;
-        } elseif ($importString == "config") {
-            require_once $_SERVER['DOCUMENT_ROOT'] . "/app/configs/Config.php";
-            return true;
+        switch ($importString) {
+            case "error":
+                require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/error.class.php";
+                return true;
+                break;
+            case "write":
+                require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/write.class.php";
+                return true;
+                break;
+            case "tracert":
+                require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/tracert.class.php";
+                return true;
+                break;
+            case "constants":
+                require_once $_SERVER['DOCUMENT_ROOT'] . "/app/configs/constants.php";
+                return true;
+                break;
+            case "config":
+                require_once $_SERVER['DOCUMENT_ROOT'] . "/app/configs/Config.php";
+                return true;
+                break;
+            default:
+                break;
         }
         /**
          * Импортирование моделей и контроллеров 
