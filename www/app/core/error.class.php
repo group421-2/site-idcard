@@ -7,7 +7,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/app/core/import.class.php';
 new import("write");
 new import("config");
 
-class $error extends Config {
+
+class error extends Config {
 
     private $_errorMessage = null;
 
@@ -16,31 +17,31 @@ class $error extends Config {
     }
 
     /**
-      * getter & setter
-      */
-    public static function getError($error) {
+     * getter & setter
+     */
+    public function getError($error) {
         $this->_errorMessage = $error;
         return $this;
     }
+
     /**
-      * Страница не найдена
-      *
-      */
+     * Страница не найдена
+     *
+     */
     public function pageNotFound() {
-        require_once $_SERVER['DOCUMENT_ROOT']."/views/error.php";
+        require_once $_SERVER['DOCUMENT_ROOT'] . "/views/error.php";
+        return $this;
     }
-    
+
     /**
-      * Запись ошибки
-      * 
-      * @var string $errorString
-      */
+     * Запись ошибки
+     * 
+     * @var string $errorString
+     */
     public function writeError() {
         $write = new write();
-        $write->fileWrite($this->_errorMessage);
+        $write->file_write($this->_errorMessage);
     }
-
-
 
 }
 

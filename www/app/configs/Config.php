@@ -13,7 +13,7 @@ class Config {
     private $db_table;
     private $db_use;
     private $db_type;
-    public $_debug;
+    public static $_debug;
 
     public function __construct() {
         $error = new error();

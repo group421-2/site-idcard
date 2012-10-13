@@ -28,6 +28,7 @@ class import {
             return true;
         } elseif ($importString == "config") {
             require_once $_SERVER['DOCUMENT_ROOT'] . "/app/configs/Config.php";
+            return true;
         }
         /**
          * Импортирование моделей и контроллеров 
