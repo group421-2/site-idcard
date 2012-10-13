@@ -56,7 +56,7 @@ class route {
             if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/app/modules/' . $this->_uri[1] . '/controller/index.php')) {
                 require_once $_SERVER['DOCUMENT_ROOT'] . '/app/modules/' . $this->_uri[1] . '/controller/index.php';
             } else {
-                error::pageNotFound();
+                $error::pageNotFound();
                 return;
             }
             $this->_controller = $this->_class . "_Controller";
@@ -73,7 +73,7 @@ class route {
             if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/app/modules/' . $this->_uri[1] . '/controller/' . $file . ".php")) {
                 require_once $_SERVER['DOCUMENT_ROOT'] . '/app/modules/' . $this->_uri[1] . '/controller/' . $file . ".php";
             } else {
-                error::pageNotFound();
+                $error::pageNotFound();
                 return;
             }
             $this->_controller = $this->_class . "_" . $file . "_Controller";

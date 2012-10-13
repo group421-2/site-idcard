@@ -7,7 +7,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/app/core/import.class.php';
 new import("write");
 new import("config");
 
-class error extends Config {
+class $error extends Config {
 
     private $_errorMessage = null;
 
