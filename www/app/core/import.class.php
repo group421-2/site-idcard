@@ -35,6 +35,9 @@ class import {
                 require_once $_SERVER['DOCUMENT_ROOT'] . "/app/configs/Config.php";
                 return true;
                 break;
+            case "includes":
+                require_once $_SERVER['DOCUMENT_ROOT'] . "/app/includes.php";
+                return true;
             default:
                 break;
         }

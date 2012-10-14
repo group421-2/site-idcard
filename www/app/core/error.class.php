@@ -19,7 +19,7 @@ class error extends Config {
     /**
      * getter & setter
      */
-    public function getError($error) {
+    public function getMessage($error) {
         $this->_errorMessage = $error;
         return $this;
     }
@@ -38,7 +38,7 @@ class error extends Config {
      * 
      * @var string $errorString
      */
-    public function writeError() {
+    public function writeMessage() {
         $write = new write();
         $write->file_write($this->_errorMessage);
     }
