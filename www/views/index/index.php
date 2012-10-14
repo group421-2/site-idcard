@@ -1,6 +1,6 @@
 <script src="/views/add/js/index/index.js"></script>
 <link rel="stylesheet" type="text/css" href="/views/add/css/index/index.css"></link>
-<div id="wrap">
+<div id="wrap" align="center">
     
     <!-- Меню -->
     <div class="menu">

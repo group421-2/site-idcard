@@ -18,8 +18,7 @@ footer {
     height: 100%;
     width: 1024px;
     border: 1px solid #000000;
-    position: relative;
-    left: 22%;
+    margin: 0 25% 0 25%;
 }
 
 .menu {
