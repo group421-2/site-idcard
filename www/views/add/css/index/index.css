@@ -23,7 +23,7 @@ footer {
 
 .menu {
     border: 1px solid #cccccc;
-    height: 50px;
+    height: 25px;
     width: 254px;
     float: left;
 }
@@ -33,7 +33,7 @@ footer {
     width: 95%;
     margin: 0 auto;
     margin-left: 30px;
-    margin-top: 75px;
+    margin-top: 50px;
     text-height: auto;
     border: 1px solid #cccccc;
     margin-bottom: 20px;

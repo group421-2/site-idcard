@@ -1,20 +1,19 @@
 <script src="/views/add/js/index/index.js"></script>
 <link rel="stylesheet" type="text/css" href="/views/add/css/index/index.css"></link>
 <div id="wrap" align="center">
-    
     <!-- Меню -->
-    <div class="menu">
-        1
-    </div>
-     <div class="menu">
-        2
-    </div>
-     <div class="menu">
-        3
-    </div>
-     <div class="menu">
-        4
-    </div>
+        <div class="menu">
+            <a href="/content">1</a>
+        </div>
+        <div class="menu">
+            <a href="/content">2</a>
+        </div>
+        <div class="menu">
+            <a href="/content">3</a>
+        </div>
+        <div class="menu">
+            <a href="/content">4</a>
+        </div>
     <!-- /Меню -->
     
     <div id="content">
