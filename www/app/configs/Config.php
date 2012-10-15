@@ -18,7 +18,6 @@ class Config {
     public function __construct() {
         $error = new error();
         $this->db_host = (usersConfig::$db_host) ? (usersConfig::$db_host) : $error->getMessage(_CONFIG_NOT_FOUND)->writeMessage();
-        //TODO: переписать на правильную работу класса error, в соответствии с новыми параметрами
         $this->db_user = (usersConfig::$db_user) ? (usersConfig::$db_user) : $error->getMessage(_CONFIG_NOT_FOUND)->writeMessage();
         $this->db_password = (usersConfig::$db_pass) ? (usersConfig::$db_pass) : $error->getMessage(_CONFIG_NOT_FOUND)->writeMessage();
         $this->db_table = (usersConfig::$db_table) ? (usersConfig::$db_table) : $error->getMessage(_CONFIG_NOT_FOUND)->writeMessage();
