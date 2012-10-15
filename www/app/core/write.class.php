@@ -15,8 +15,8 @@ class write {
 
     public function file_write($string) {
         $handle = fopen($this->file_path, "a");
-        fwrite($handle, date("d.m.Y H:i" . "\n\r\n\r"));
-        fwrite($handle, $string . "\n\r\n\r\n\r");
+        fwrite($handle, date("d.m.Y H:i" . "\n\r"));
+        fwrite($handle, $string . "\n\r");
         fclose($handle);
     }
 
