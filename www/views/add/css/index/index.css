@@ -24,7 +24,7 @@ footer {
 .menu {
     border: 1px solid #cccccc;
     height: 25px;
-    width: 254px;
+    width: 339px;
     float: left;
 }
 
@@ -37,6 +37,20 @@ footer {
     text-height: auto;
     border: 1px solid #cccccc;
     margin-bottom: 20px;
+}
+
+.pics {
+    height:  700px;
+    width:   973px;
+    margin-top: 50px;
+} 
+
+.pics img {  
+    padding: 15px;  
+    height: 700px;
+    width: 973px;
+    margin-left: -15px;
+    margin-top: -15px;
 }
 
 

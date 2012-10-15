@@ -38,6 +38,10 @@ class import {
             case "includes":
                 require_once $_SERVER['DOCUMENT_ROOT'] . "/app/includes.php";
                 return true;
+            case "resize":
+                require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/imageResize.class.php";
+                return true;
+                break;
             default:
                 break;
         }
