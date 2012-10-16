@@ -4,6 +4,9 @@ $(document).ready(function() {
     setTimeout(showHideImg(), 1500);
         
 });
+/**
+ * Слайд-шоу
+ */
 function scrollDown() {
     $('#scrollDown').cycle({
         sync: true,
@@ -12,6 +15,9 @@ function scrollDown() {
     //speed: 700
     });
 }
+/**
+ * Военная хитрость
+ */
 function showHideImg() {
     $("scrollDown").toggle();
 }
