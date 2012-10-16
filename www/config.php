@@ -1,6 +1,6 @@
 <?php
 
-require_once '/app/configs/Config.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/app/configs/Config.php';
 
 class usersConfig extends Config {
 
