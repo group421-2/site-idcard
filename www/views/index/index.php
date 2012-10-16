@@ -1,16 +1,27 @@
 <script src="/views/add/js/index/index.js"></script>
 <script src="/views/add/js/libs/jquery.easing.compatibility.js"></script>
 <script src="/views/add/js/libs/jquery.cycle.lite.js"></script>
+<link rel="stylesheet" type="text/css" href="/views/add/css/index/index.css"></link>
 <script>
     $(document).ready(function() {
+        showHideImg();
+        scrollDown();
+        setTimeout(showHideImg(), 1500);
+        
+    });
+    function scrollDown() {
         $('#scrollDown').cycle({
             sync: true,
             delay: -5000,
             height: 560
+            //speed: 700
         });
-    });
+    }
+    function showHideImg() {
+        $("scrollDown").toggle();
+    }
 </script>
-<link rel="stylesheet" type="text/css" href="/views/add/css/index/index.css"></link>
+
 <div id="wrap" align="center">
     <!-- Меню -->
     <div class="menu">
@@ -23,13 +34,13 @@
         <a href="/services">Услуги</a>
     </div>
     <!-- /Меню -->
-    
+
     <div id="scrollDown" class="pics">
-        <img src="/files/photos/1.jpg" />
-        <img src="/files/photos/2.jpg" />
-        <img src="/files/photos/3.jpg" />
-        <img src="/files/photos/4.jpg" />
-        <img src="/files/photos/5.jpg" />
+        <img src="files/photos/1.jpg" />
+        <img src="files/photos/2.jpg" />
+        <img src="files/photos/3.jpg" />
+        <img src="files/photos/4.jpg" />
+        <img src="files/photos/5.jpg" />
     </div>
     <div id="content">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
