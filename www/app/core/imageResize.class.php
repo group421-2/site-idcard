@@ -1,14 +1,15 @@
 <?php
 
-
-
 class imageResize {
 
-// $infile - входящий графический файл
-// $outfile - измененый файл
-// $neww - новая ширина
-// $newh - новая высота
-// $quality - качество измененного рисунка
+    /**
+     * Ресайз изображения
+     * @param string $outfile - выходной файл
+     * @param string $infile - входной файл
+     * @param int $neww - новая ширина 
+     * @param int $newh - новая высота 
+     * @param int $quality - качество изображения
+     */
     public function resize($outfile, $infile, $neww, $newh, $quality) {
         $im = imagecreatefromjpeg($infile); // Создаем графический объект из входящего файла
 // Далее вычесляем ширину и высоту входящего файла и создаваемого фала:
