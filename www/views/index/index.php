@@ -2,25 +2,6 @@
 <script src="/views/add/js/libs/jquery.easing.compatibility.js"></script>
 <script src="/views/add/js/libs/jquery.cycle.lite.js"></script>
 <link rel="stylesheet" type="text/css" href="/views/add/css/index/index.css"></link>
-<script>
-    $(document).ready(function() {
-        showHideImg();
-        scrollDown();
-        setTimeout(showHideImg(), 1500);
-        
-    });
-    function scrollDown() {
-        $('#scrollDown').cycle({
-            sync: true,
-            delay: -5000,
-            height: 560
-            //speed: 700
-        });
-    }
-    function showHideImg() {
-        $("scrollDown").toggle();
-    }
-</script>
 
 <div id="wrap" align="center">
     <!-- Меню -->
