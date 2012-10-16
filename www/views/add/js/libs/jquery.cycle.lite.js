@@ -111,7 +111,6 @@ $.fn.cycle = function(options) {
             $(opts.next).unbind('click.cycle').bind('click.cycle', function(){return advance(els,opts,opts.rev?-1:1);});
         if (opts.prev)
             $(opts.prev).unbind('click.cycle').bind('click.cycle', function(){return advance(els,opts,opts.rev?1:-1);});
-
         if (opts.timeout)
             this.cycleTimeout = setTimeout(function() {
                 go(els,opts,0,!opts.rev);
