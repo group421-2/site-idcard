@@ -11,6 +11,8 @@ class Core {
         require_once "route.class.php";
         new route($url);
     }
+    
+    
 
 }
 
