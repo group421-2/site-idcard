@@ -7,7 +7,6 @@
  */
 class filter {
 
-    private $_input = "";
     private $_output = "";
 
     public function __construct() {
