@@ -24,7 +24,7 @@ class filter {
     }
 
     /**
-     * Удаление HT<L символов
+     * Удаление HTML символов
      * @param string $input
      * @return $this
      */
@@ -36,6 +36,7 @@ class filter {
     /**
      * Очистка массива (пока без методов)
      * @param array $input
+     * TODO: реализовать использование методов
      */
     public function clearArray(array $input) {
         foreach ($input as $key) {
