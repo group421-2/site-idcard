@@ -39,21 +39,20 @@ footer {
     margin-bottom: 20px;
 }
 
-.pics {
+.gallery {
+
     height:  560px;
     width:   800px;
     margin-top: 25px;
 } 
 
-.pics img {  
+.gallery img {  
     padding: 15px;  
-    height: 560px;
-    width: 800px;
-    margin-left: -15px;
-    margin-top: -15px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 120px;
+    width: 200px;
+    margin-left: -32px;
+    margin-right: 15px;
+    margin-top: 20px;
 }
 
 
