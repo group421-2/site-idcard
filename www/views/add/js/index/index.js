@@ -1,8 +1,7 @@
 $(document).ready(function() {
     showHideImg();
     scrollDown();
-    setTimeout(showHideImg(), 1500);
-        
+    setTimeout(showHideImg(), 1500);    
 });
 /**
  * Слайд-шоу
@@ -10,7 +9,7 @@ $(document).ready(function() {
 function scrollDown() {
     $('#scrollDown').cycle({
         sync: true,
-        delay: -5000,
+        //delay: -5000,
         height: 560
     //speed: 700
     });
@@ -20,4 +19,5 @@ function scrollDown() {
  */
 function showHideImg() {
     $("scrollDown").toggle();
+    //alert("Toggle!");
 }

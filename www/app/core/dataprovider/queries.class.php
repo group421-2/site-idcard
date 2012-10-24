@@ -86,6 +86,7 @@ class queries {
 
     public function done() {
         $error = new error();
+        $tracert = new tracert();
         $this->__prepare();
         switch ($this->_switcher) {
             case 1:
@@ -95,14 +96,17 @@ class queries {
                     $array[] = $fetch;
                 } while ($fetch = mysql_fetch_assoc($result));
                 $error->getMessage("Query " . $this->_query . " was execute, result return now")->writeMessage();
+                $tracert->getParams($this->_query, $array);
                 return $array;
                 break;
             case 2:
                 $result = mysql_query($this->_query) or die(mysql_error());
+                $tracert->getParams($this->_query);
                 return true;
                 break;
             case 3:
                 $result = mysql_query($this->_query) or die(mysql_error());
+                $tracert->getParams($this->_query);
                 return true;
                 break;
         }
