@@ -55,8 +55,8 @@ function create($do, $what, $name, $moduleName = NULL) {
                 <?php \n 
                 \n\n\n 
                 class " . $moduleName . "_" . $name . "_Controller {
-                    public function __construct(\$params) { 
-                        \$this->init(\$params)->execute(); 
+                    public function __construct(array \$params) { 
+                        \$this->init(array \$params)->execute(); 
                     } \n
                     private function init(\$params) { 
                         return \$this;\n\n
@@ -91,7 +91,9 @@ function create($do, $what, $name, $moduleName = NULL) {
                 $file = fopen("views/$moduleName/$name.php", "w+");
                 fwrite($file, "<script src=\"views/add/js/$moduleName/$name.js\"></script>
                 <link rel=\"stylesheet\" type=\"text/css\" href=\"/views/add/css/$moduleName/$name.css\"></link>
-                <h1>Вы успешно создали вид</h1>");
+                <h1>Вы успешно создали вид</h1>\n
+                require_once \$_SERVER['DOCUMENT_ROOT'].'/app/core/import.class.php';\n
+                new import(\"controller." . $moduleName . ".$name\")");
                 fclose($file);
                 print "View $name in $moduleName created";
                 break;

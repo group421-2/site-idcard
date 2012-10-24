@@ -7,7 +7,7 @@ class import {
     /**
      * @author PeoneEr <PeoneErko@gmail.com>
      * импортирование моделей
-     * @param string $importString
+     * @param string $importString входная строка параметров
      * @tutorial import("model.index")
      */
     public function __construct($importString) {
@@ -75,6 +75,7 @@ class import {
                     require_once $_SERVER['DOCUMENT_ROOT'] . "/app/modules/" . $this->_import[1] . "/controller/index.php";
                     return true;
                 }
+                /** @turotial new import("controller.index.add"); */
                 if (count($this->_import) == 3) {
                     require_once $_SERVER['DOCUMENT_ROOT'] . "/app/modules/" . $this->_import[1] . "/controller/" . $this->_import[2] . ".php";
                     return true;

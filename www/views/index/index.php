@@ -2,7 +2,11 @@
 <script src="/views/add/js/libs/jquery.easing.compatibility.js"></script>
 <script src="/views/add/js/libs/jquery.cycle.lite.js"></script>
 <link rel="stylesheet" type="text/css" href="/views/add/css/index/index.css"></link>
-
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/import.class.php";
+new import("controller.index");
+$indexController = new Index_Controller();
+?>
 <div id="wrap" align="center">
     <!-- Меню -->
     <div class="menu">
