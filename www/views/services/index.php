@@ -13,6 +13,7 @@
     </div>
     <div id="content" allign="center">
         <h1>УСЛУГИ БЛЕАТЬ</h1>
+        <h2>Надо будет исправить</h2>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
         when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
