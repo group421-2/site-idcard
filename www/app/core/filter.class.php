@@ -4,14 +4,17 @@
  * Класс фильтрации.
  * Реализиует очистку, проверку переменных и возвращает результаты
  * @author PeoneEr
+ * @tutorial (array)$string = new filter()->clearArray($string);
+ * TODO: почитать про конструкторы
  */
 class filter {
 
     private $_output = "";
     private $_input = "";
-
+    
     public function __construct($input) {
         $this->_input = $input;
+        return $this;
     }
 
     /**
@@ -34,7 +37,6 @@ class filter {
         return $this;
     }
 
-
     /**
      * Завершение выполнения методов
      * @return string $this->_output
@@ -42,8 +44,7 @@ class filter {
     public function returnClearedString() {
         return $this->_output;
     }
-    
-    
+
     /**
      * Очистка массива (пока без методов)
      * @param array $input
@@ -65,7 +66,7 @@ class filter {
             return true;
         return false;
     }
-    
+
     /**
      * Деструктор класса
      */

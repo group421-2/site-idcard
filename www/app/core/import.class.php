@@ -42,6 +42,10 @@ class import {
                 require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/imageResize.class.php";
                 return true;
                 break;
+            case "filter":
+                require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/filter.class.php";
+                return true;
+                break;
             default:
                 break;
         }
