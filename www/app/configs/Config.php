@@ -28,6 +28,27 @@ class Config {
         if ($this->db_use)
             new databaseprovider($this->db_host, $this->db_user, $this->db_password, $this->db_table, $this->db_type);
     }
+    
+    /**
+     * Возвращает желаемый параметр
+     * @param string $var
+     * @return string $var
+     */
+    public function getVar($var) {
+        switch ($var) {
+            case "db_host": return $this->db_host;
+                break;
+            case "db_user": return $this->db_user;
+                break;
+            case "db_password": return $this->db_password;
+                break;
+            case "db_table": return $this->db_table;
+                break;
+            case "debug": return self::$_debug;
+            default: return array("error" => "Такой параметр не существует");
+                break;
+        }
+    }
 
 }
 

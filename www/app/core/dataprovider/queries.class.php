@@ -6,6 +6,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/import.class.php";
 new import("includes");
 new import("error");
+new import("config");
 
 class queries {
 
@@ -87,6 +88,7 @@ class queries {
     public function done() {
         $error = new error();
         $tracert = new tracert();
+        $config = new Config();
         $this->__prepare();
         switch ($this->_switcher) {
             case 1:
@@ -95,18 +97,22 @@ class queries {
                 do {
                     $array[] = $fetch;
                 } while ($fetch = mysql_fetch_assoc($result));
-                $error->getMessage("Query " . $this->_query . " was execute, result return now")->writeMessage();
-                $tracert->getParams($this->_query, $array);
+                if ($config->getVar("debug")) {
+                    $error->getMessage("Query " . $this->_query . " was execute, result return now")->writeMessage();
+                    $tracert->getParams($this->_query, $array);
+                }
                 return $array;
                 break;
             case 2:
-                $result = mysql_query($this->_query) or die(mysql_error());
-                $tracert->getParams($this->_query);
+                $result = mysql_query($this->_query) or die($error->getMessage(mysql_error())->writeMessage());
+                if ($config->getVar("debug"))
+                    $tracert->getParams($this->_query);
                 return true;
                 break;
             case 3:
-                $result = mysql_query($this->_query) or die(mysql_error());
-                $tracert->getParams($this->_query);
+                $result = mysql_query($this->_query) or die($error->getMessage(mysql_error())->writeMessage());
+                if ($config->getVar("debug"))
+                    $tracert->getParams($this->_query);
                 return true;
                 break;
         }

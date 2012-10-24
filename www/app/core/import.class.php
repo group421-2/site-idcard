@@ -50,10 +50,6 @@ class import {
                 require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/dataprovider/queries.class.php";
                 return true;
                 break;
-            case "tracert":
-                require_once $_SERVER['DOCUMENT_ROOT']."/app/core/tracert.class.php";
-                return true;
-                break;
             default:
                 break;
         }
