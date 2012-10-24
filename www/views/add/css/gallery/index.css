@@ -39,6 +39,23 @@ footer {
     margin-bottom: 20px;
 }
 
+.pics {
+    height:  560px;
+    width:   800px;
+    margin-top: 25px;
+} 
+
+.pics img {  
+    padding: 15px;  
+    height: 560px;
+    width: 800px;
+    margin-left: -15px;
+    margin-top: -15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 
 
 
