@@ -20,7 +20,7 @@ $albums = gallery_album_Controller::returnPhotoPath();
         <ul class="thumbnails" style="margin-top: 20px; margin-left: 30px;">
             <?php for ($i = 0; $i < count($albums); $i++) : ?>
                 <li class="span3">
-                    <img src="<?= $albums[$i]['path']; ?>" class="thumbnail"/>
+                    <a rel="example_group" href="<?= $albums[$i]['path']; ?>" title="Lorem ipsum dolor sit amet"><img src="<?= $albums[$i]['path']; ?>" class="thumbnail" /></a>
                 </li>
             <?php endfor; ?>
         </ul>

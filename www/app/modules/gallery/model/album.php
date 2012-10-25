@@ -2,6 +2,9 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/dataprovider/queries.class.php";
 
+
+
+
 class gallery_album_Model {
 
     private static $_query;
