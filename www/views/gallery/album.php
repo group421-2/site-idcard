@@ -1,5 +1,10 @@
 <script src="/views/add/js/gallery/album.js"></script>
 <link rel="stylesheet" type="text/css" href="/views/add/css/gallery/album.css"></link>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/import.class.php";
+new import("controller.gallery.album");
+$albums = gallery_album_Controller::returnPhotoPath();
+?>
 <div id="wrap" align="center">
     <!-- Меню -->
     <div class="menu">
@@ -12,15 +17,14 @@
         <a href="/services">Услуги</a>
     </div>
     <div id="content" allign="center">
-        <div id="wrapImage" class="gallery">
-            <img src="/files/photos/1.jpg" />
-            <img src="/files/photos/1.jpg" />    
-            <img src="/files/photos/2.jpg" />
-            <img src="/files/photos/3.jpg" />
-            <img src="/files/photos/4.jpg" />
-            <img src="/files/photos/5.jpg" />
-        </div>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        <ul class="thumbnails" style="margin-top: 20px; margin-left: 30px;">
+            <?php for ($i = 0; $i < count($albums); $i++) : ?>
+                <li class="span3">
+                    <img src="<?= $albums[$i]['path']; ?>" class="thumbnail"/>
+                </li>
+            <?php endfor; ?>
+        </ul>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
         when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
         It has survived not only five centuries, but also the leap into electronic typesetting, 

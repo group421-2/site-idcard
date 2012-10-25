@@ -7,6 +7,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/import.class.php";
 new import("includes");
 new import("error");
 new import("config");
+new import("tracert");
 
 class queries {
 

@@ -7,10 +7,10 @@ class Index_Model {
     private $_query;
     public $_result;
     
-    public function getLastQuotes() {
-       $this->_query = new queries();
-       $this->_result = $this->_query->select("*")->from("quotes")->orderBy("`date` DESC")->done();
-       return $this->_result;
+    protected function getSlideShowPhotos() {
+        $this->_query = new queries();
+        $this->_result = $this->_query->select("path")->from("gallery_photos")->where("slideShow = '1'")->done();
+        return $this->_result;
     }
 }
 

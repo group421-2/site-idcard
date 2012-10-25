@@ -1,5 +1,5 @@
 <?php
-
+//TODO продумать статическое создание методов и полей класса для тех классов, в которых нужно использование параметра
 function create($do, $what, $name, $moduleName = NULL) {
     if ($do == "create") {
         switch ($what) {

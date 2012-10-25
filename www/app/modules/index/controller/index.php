@@ -16,8 +16,8 @@ class Index_Controller extends Index_Model {
         
     }
     
-    public function test() {
-        echo "Test";
+    public function returnSlideShow() {
+        return $this->getSlideShowPhotos();
     }
 
 }

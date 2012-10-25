@@ -6,6 +6,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/import.class.php";
 new import("controller.index");
 $indexController = new Index_Controller();
+$slideShowArray = $indexController->returnSlideShow();
 ?>
 <div id="wrap" align="center">
     <!-- Меню -->
@@ -21,11 +22,9 @@ $indexController = new Index_Controller();
     <!-- /Меню -->
 
     <div id="scrollDown" class="pics">
-        <img src="files/photos/1.jpg" />
-        <img src="files/photos/2.jpg" />
-        <img src="files/photos/3.jpg" />
-        <img src="files/photos/4.jpg" />
-        <img src="files/photos/5.jpg" />
+        <?php for ($i = 0; $i < count($slideShowArray); $i++) : ?>
+            <img src="<?= $slideShowArray[$i]['path']; ?>" />
+            <?php endfor; ?>
     </div>
     <div id="content">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

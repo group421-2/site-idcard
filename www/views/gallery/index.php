@@ -1,5 +1,11 @@
 <script src="/views/add/js/gallery/index.js"></script>
 <link rel="stylesheet" type="text/css" href="/views/add/css/gallery/index.css"></link>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/import.class.php";
+new import("controller.index");
+$galleryIndexController = new Gallery_Controller();
+$albums = $galleryIndexController->returnAlbums();
+?>
 <div id="wrap" align="center">
     <!-- Меню -->
     <div class="menu">
@@ -12,39 +18,19 @@
         <a href="/services">Услуги</a>
     </div>
     <div id="content" allign="center">
-        <ul class="thumbnails">
-            <li class="span3">
-                <a href="/gallery/album/1">
-                    <img src="files/photos/1.jpg" class="thumbnail"/>
-                </a>
-            </li>
-            <li class="span3">
-                <a href="/gallery/album/2">
-                    <img src="files/photos/1.jpg" class="thumbnail"/>
-                </a>
-            </li>
-            <li class="span3">
-                <a href="/gallery/album/3">
-                    <img src="files/photos/2.jpg" class="thumbnail"/>
-                </a>
-            </li>
-            <li class="span3">
-                <a href="/gallery/album/4">
-                    <img src="files/photos/3.jpg" class="thumbnail"/>
-                </a>
-            </li>
-            <li class="span3">
-                <a href="/gallery/album/5">
-                    <img src="files/photos/4.jpg" class="thumbnail"/>
-                </a>
-            </li>
-            <li class="span3">
-                <a href="/gallery/album/6">
-                    <img src="files/photos/5.jpg" class="thumbnail"/>
-                </a>
-            </li>
+        <ul class="thumbnails" style="margin-top: 20px; margin-left: 30px;">
+            <?php
+            for ($i = 0; $i < count($albums); $i++) :
+                $photos = $galleryIndexController->returnPhotoPath($albums[$i]['id']);
+                ?>
 
-            ...
+                <li class="span3">
+                    <a href="/gallery/album/<?= $albums[$i]['id']; ?>">
+                        <img src="<?= $photos[0]['path']; ?>" class="thumbnail"/>
+    <?= $albums[$i]['name']; ?>
+                    </a>
+                </li>
+<?php endfor; ?>
         </ul>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
