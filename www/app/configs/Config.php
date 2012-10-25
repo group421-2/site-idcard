@@ -28,7 +28,7 @@ class Config {
         if ($this->db_use)
             new databaseprovider($this->db_host, $this->db_user, $this->db_password, $this->db_table, $this->db_type);
     }
-    
+
     /**
      * Возвращает желаемый параметр
      * @param string $var
@@ -45,6 +45,7 @@ class Config {
             case "db_table": return $this->db_table;
                 break;
             case "debug": return self::$_debug;
+                break;
             default: return array("error" => "Такой параметр не существует");
                 break;
         }

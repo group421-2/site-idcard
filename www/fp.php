@@ -1,6 +1,5 @@
 <?php
 
-//TODO: дописать в создании вьюшки прописывание пути к контроллеру
 function create($do, $what, $name, $moduleName = NULL) {
     if ($do == "create") {
         switch ($what) {
