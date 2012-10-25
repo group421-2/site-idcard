@@ -1,4 +1,5 @@
 <?php
+
 //TODO продумать статическое создание методов и полей класса для тех классов, в которых нужно использование параметра
 function create($do, $what, $name, $moduleName = NULL) {
     if ($do == "create") {
@@ -51,7 +52,9 @@ function create($do, $what, $name, $moduleName = NULL) {
                 touch("app/modules/$moduleName/controller/$name.php");
                 $file = fopen("app/modules/$moduleName/controller/$name.php", "w+");
                 fwrite($file, "
-                <?php \n 
+                <?php
+                \n 
+                require_once \$_SERVER['DOCUMENT_ROOT'] . '/app/core/import.class.php';
                 \n\n\n 
                 class " . $moduleName . "_" . $name . "_Controller {
                     public function __construct(array \$params) { 
@@ -73,8 +76,13 @@ function create($do, $what, $name, $moduleName = NULL) {
                     exit("All what we need is sex.");
                 touch("app/modules/$moduleName/model/$name.php");
                 $file = fopen("app/modules/$moduleName/model/$name.php", "w+");
-                fwrite($file, "<?php 
+                fwrite($file, "
+                    <?php
+                    require_once \$_SERVER['DOCUMENT_ROOT'] . '/app/core/import.class.php';
+                new import(\"query\");
                 class " . $moduleName . "_" . $name . "_Model {
+                    private \$_query;
+                    private \$_result;
                     \n\n
                 }
                 ?>");
