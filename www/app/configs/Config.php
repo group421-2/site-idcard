@@ -23,7 +23,7 @@ class Config {
         $this->db_table = (usersConfig::$db_table) ? (usersConfig::$db_table) : $error->getMessage(_CONFIG_NOT_FOUND)->writeMessage();
         $this->db_use = (usersConfig::$db_use) ? (usersConfig::$db_use) : $error->getMessage(_CONFIG_NOT_FOUND)->writeMessage();
         $this->db_type = (usersConfig::$db_type) ? (usersConfig::$db_type) : $error->getMessage(_CONFIG_NOT_FOUND)->writeMessage();
-        $this->_debug = (usersConfig::$_debug) ? (usersConfig::$_debug) : $error->getMessage(_CONFIG_NOT_FOUND)->writeMessage();
+        self::$_debug = (usersConfig::$_debug) ? (usersConfig::$_debug) : $error->getMessage(_CONFIG_NOT_FOUND)->writeMessage();
         //TODO: передавать локаль в параметрах
         if ($this->db_use)
             new databaseprovider($this->db_host, $this->db_user, $this->db_password, $this->db_table, $this->db_type);
