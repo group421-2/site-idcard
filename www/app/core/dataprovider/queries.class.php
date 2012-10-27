@@ -2,6 +2,8 @@
 
 /**
  * Запросы в бд
+ * @author PeoneEr
+ * @tutorial $this->_result = $this->_query()->select()->from()->where()->done();
  */
 require_once $_SERVER['DOCUMENT_ROOT'] . "/app/core/import.class.php";
 new import("includes");
@@ -11,15 +13,68 @@ new import("tracert");
 
 class queries {
 
+    /**
+     *
+     * @var string $_select Выбрать
+     */
     private $_select;
+
+    /**
+     *
+     * @var string $_from Откуда
+     */
     private $_from;
+
+    /**
+     *
+     * @var string $_where Где
+     */
     private $_where;
+
+    /**
+     *
+     * @var string $_into Вставить в
+     */
     private $_into;
+
+    /**
+     *
+     * @var array $_values Значения для вставки
+     */
     private $_values;
+
+    /**
+     *
+     * @var string $_update_table Значения для обновления таблиц
+     */
     private $_update_table;
+
+    /**
+     *
+     * @var string $_set Установить
+     */
     private $_set;
+
+    /**
+     *
+     * @var string $_query Запрос
+     */
     private $_query;
-    private $_switcher; // 1: select, 2: insert, 3: update
+
+    /**
+     *
+     * @var int $_switcher Переключатель
+     * 1: select
+     * 2: insert
+     * 3: update
+     * Задается автоматически
+     */
+    private $_switcher;
+
+    /**
+     *
+     * @var string $_order Отсортировать
+     */
     private $_order;
 
     public function select($select) {
@@ -76,9 +131,6 @@ class queries {
                 break;
             case 2:
                 $this->_query = "INSERT INTO " . $this->_into . " VALUES " . $this->_values;
-                print "<pre>";
-                var_dump($this->_query);
-                print "</pre>";
                 break;
             case 3:
                 $this->_query = "UPDATE " . $this->_update_table . " SET " . $this->_set . " " . $this->_where;
@@ -125,7 +177,7 @@ class queries {
     }
 
     public function getByName($from, $name) {
-        $this->_query = "SELECT * FROM $from WHERE `id` = $name";
+        $this->_query = "SELECT * FROM $from WHERE `name` = $name";
         $this->_switcher = 1;
     }
 
